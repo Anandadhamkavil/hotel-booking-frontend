@@ -1,0 +1,39 @@
+header{
+    height: 10vh;
+    line-height: 10vh;
+    padding: 0 20px;
+}
+
+header img{
+    margin: 20px 0;
+    width: 100px;
+}
+header ul{
+    display: inline-block;
+}
+header ul li{
+    display: inline-block;
+    text-transform: uppercase;
+}
+header ul li a{
+    color: #000;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    color: #7fc142;
+}
+header i{
+    margin: 0 20px;
+}
+header button{
+    margin-top: 10px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    background: #7fc142;
+    font-weight: bold;
+    color: white;
+}
+header .navlinks1 span{
+    display: none;
+}

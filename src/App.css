@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Mono:wght@100&family=Sofia+Sans+Semi+Condensed:wght@200&family=Tilt+Warp&family=Zen+Dots&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2{
+  font-family: 'Zen Dots', cursive;
+  font-weight: 500;
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.flex{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.flex_space{
+  display: flex;
+  justify-content: space-between;
+}
+button{
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+/* .primary-btns{
+  padding: 15px 40px;
+  background: #7fc142;
+  font-weight: bold;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.secondary-btns{
+  padding: 15px 40px;
+  background: none;
+  border: 2px solid white;
+  font-weight: bold;
+  color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.container{
+  max-width: 85%;
+  margin: auto;
+} */
