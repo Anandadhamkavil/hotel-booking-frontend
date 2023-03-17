@@ -14,21 +14,21 @@ function Rooms({ room,fromdate,todate }) {
 
     return (
         <>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={room.imageurls[0]} />
-                <Card.Body>
-                    <Card.Title>{room.name}</Card.Title>
-                    <Stack direction="horizontal" gap={2}>
-                        <Card.Text>
+            <Card style={{ width: '18rem',height:'400px',marginBottom:'40px'}}>
+                <Card.Img variant="top" src={room.imageurls[0]} style={{width:'100%',height:'200px'}}/>
+                <Card.Body >
+                    <Card.Title >{room.name}</Card.Title>
+                    <div direction="horizontal" gap={2}>
+                        <Card.Text style={{textAlign:'justify'}}>
                             <b>Type</b> : {room.type}
                         </Card.Text>
                         <Card.Text className='ms-auto mb-3'>
                             <b>Rent</b> : ₹{room.rentperday}
                         </Card.Text>
-                    </Stack>
-                    <Stack direction="horizontal" gap={2}>
+                    </div>
+                    <Stack direction="horizontal" gap={2} >
                         
-                       <Link to={`/book/${room._id}`}> <Button variant="dark">Book Now</Button></Link>
+                       <Link to={`/book/${room._id}`}> <Button variant="dark" className='ms-auto'>Book Now</Button></Link>
                         <Button variant="dark" className='ms-auto' onClick={handleShow}>View Details</Button>
                     </Stack >
                 </Card.Body>

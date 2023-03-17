@@ -179,7 +179,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className='gallery'>
+            {/* <section className='gallery'>
                 <div className='container top'>
                     <div className='heading'>
                         <h1>PHOTOS</h1>
@@ -189,7 +189,7 @@ function Home() {
                     <div className='content mtop'>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }

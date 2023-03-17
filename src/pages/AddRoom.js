@@ -38,9 +38,9 @@ function AddRoom() {
         }
     }
   return (
-    <div className='container'>
+    <div className='container mt-5'>
     <div>
-       <h2>Add Employee</h2>
+       <h2>Add Rooms</h2>
        <p style={{textAlign:'justify',}}> 
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit amet asperiores iure libero atque error voluptate. Possimus non ipsum corporis! Consequuntur saepe, eveniet dolore aliquam doloribus velit inventore veritatis harum!
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit amet asperiores iure libero atque error voluptate. Possimus non ipsum corporis! Consequuntur saepe, eveniet dolore aliquam doloribus velit inventore veritatis harum!

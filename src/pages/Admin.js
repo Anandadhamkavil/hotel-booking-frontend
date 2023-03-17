@@ -4,7 +4,7 @@ import axios from 'axios'
 import Table from 'react-bootstrap/Table';
 import Stack from 'react-bootstrap/Stack';
 import { Link } from 'react-router-dom';
-
+import swal from 'sweetalert2'
 
 function Admin() {
 
@@ -47,6 +47,19 @@ function Admin() {
     }
     userData()
   }, [])
+
+  const handleDeleteRoom = (roomId) => {
+    // Make a DELETE request to the backend API to remove the room from the database
+    axios.delete(`http://localhost:8000/api/rooms/deleterooms/${roomId}`)
+      .then(response => {
+        // Update the state to remove the deleted room
+        setRooms(rooms.filter(room => room._id !== roomId));
+        swal.fire('Congratulations', 'Your Room Deleted Successfully' , 'success')
+      })
+      .catch(error => console.error(error));
+      swal.fire('Oops', 'Something went wrong..' , 'error')
+  };
+
   return (
     <div className='row2 mt-5' style={{ borderRadius: '5px', padding: '50px', marginLeft: '50px', marginRight: '50px' }}>
         <h1 className='text-center'>Admin Panel</h1>
@@ -104,6 +117,7 @@ function Admin() {
                   <th>Phone Number</th>
                   <th>Rent</th>
                   <th>Type </th>
+                  <th>Acion</th>
                 </tr>
               </thead>
               <tbody>
@@ -115,6 +129,7 @@ function Admin() {
                     <td>{room.phonenumber}</td>
                     <td>₹{room.rentperday}</td>
                     <td>{room.type}</td>
+                    <td><i class="fa-solid fa-trash me-3" onClick={() => handleDeleteRoom(room._id)}></i></td>
                   </tr>))}
 
               </tbody>
